@@ -269,6 +269,7 @@ def process_lesson(path,action_counts,plumed_syntax,eggdb=None):
     except Exception as e:
       print(" EXCEPTION RAISED IN",path)
       print(e)
+      global an_error_happened
       an_error_happened=True
 
 
