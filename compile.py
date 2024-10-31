@@ -158,7 +158,8 @@ def process_lesson(path,action_counts,plumed_syntax,eggdb=None):
     if not eggdb:
         eggdb=sys.stdout
 
-    with cd(path):
+    try:
+      with cd(path):
         # start timing
         start_time = time.perf_counter()
         # open file
@@ -261,6 +262,9 @@ def process_lesson(path,action_counts,plumed_syntax,eggdb=None):
         end_time = time.perf_counter()
         # store time
         print("  time: " + str(end_time-start_time), file=eggdb)
+    except:
+      print(" EXCEPTION RAISED - IGNORE")
+
 
 if __name__ == "__main__":
     nreplicas, replica, argv = 1, 0, sys.argv[1:]
