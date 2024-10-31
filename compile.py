@@ -268,7 +268,7 @@ def process_lesson(path,action_counts,plumed_syntax,eggdb=None):
         print("  time: " + str(end_time-start_time), file=eggdb)
     except Exception as e:
       print(" EXCEPTION RAISED IN",path)
-      print(" Message:",e.message)
+      print(e)
       an_error_happened=True
 
 
