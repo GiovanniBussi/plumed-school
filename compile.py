@@ -263,7 +263,7 @@ def process_lesson(path,action_counts,plumed_syntax,eggdb=None):
         # store time
         print("  time: " + str(end_time-start_time), file=eggdb)
     except:
-      print(" EXCEPTION RAISED - IGNORE")
+      print(" EXCEPTION RAISED - IGNORE",path)
 
 
 if __name__ == "__main__":
